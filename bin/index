@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const inquirer = require('inquirer');
+const fs = require('fs-extra');
+
+const prompt = [];
+prompt.push({
+    type: 'input',
+    name: 'name',
+    message: '请输入项目名称',
+    validate(input) {
+        if (!input) {
+            return '请输入项目名称';
+        }
+        if (fs.existsSync(input)) {
+            return '项目名重复';
+        }
+        return true;
+    },
+});
+
+prompt.push({
+    type: 'input',
+    name: 'description',
+    message: '请输入项目描述'
+});
+
+prompt.push({
+    type: 'rawlist',
+    name: 'template',
+    choices: [
+        'vue-admin',
+        'vue-admin-typescript',
+        'vue-pwa',
+        new inquirer.Separator(),
+        'react-admin',
+        'react-admin-typescript',
+        'vue-pwa',
+    ],
+});
+
+inquirer.prompt(prompt).then(answer => {
+    console.log(answer);
+});

@@ -1,0 +1,32 @@
+{
+  "name": "nova-cli",
+  "version": "1.0.0",
+  "description": "nova-cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nova": "./bin/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaochunxiao/nova-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "node",
+    "nova"
+  ],
+  "author": "jiaochunxiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiaochunxiao/nova-cli/issues"
+  },
+  "homepage": "https://github.com/jiaochunxiao/nova-cli#readme",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0"
+  }
+}
