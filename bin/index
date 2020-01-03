@@ -15,13 +15,13 @@ const prompt = [];
 prompt.push({
     type: 'input',
     name: 'description',
-    message: '请输入项目描述：'
+    message: 'project description:'
 });
 
 prompt.push({
     type: 'input',
     name: 'author',
-    message: '请输入作者姓名：'
+    message: 'author:'
 });
 
 prompt.push({
@@ -37,9 +37,15 @@ prompt.push({
     ],
 });
 
+let version  = require('../src/version');
+const packageJson = require('../package.json');
+version += `\n${packageJson.version}\n`;
+
 program
-    .version(require('../package.json').version, '-v, --version')
-    .command('init <name>')
+    .version(version);
+
+program
+    .command('init <app-name>')
     .action(name => {
         if(fs.existsSync(name)) {
             console.log(symbols.error, chalk.red('The project already exists!'));
@@ -47,7 +53,6 @@ program
         }
         inquirer.prompt(prompt).then(answers => {
             const { description, author, template } = answers;
-            console.log(description, author, template);
             const spinner = ora('downloading template...');
             const gitRepo = `direct:https://github.com/jiaochunxiao/${template}-template#master`;
             spinner.start();
