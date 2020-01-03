@@ -25,9 +25,22 @@
   },
   "homepage": "https://github.com/jiaochunxiao/nova-cli#readme",
   "dependencies": {
+    "chalk": "^3.0.0",
     "commander": "^4.0.1",
+    "download-git-repo": "^3.0.2",
     "fs-extra": "^8.1.0",
-    "inquirer": "^7.0.0"
+    "handlebars": "^4.5.3",
+    "inquirer": "^7.0.0",
+    "log-symbols": "^3.0.0",
+    "ora": "^4.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
