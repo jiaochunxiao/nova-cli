@@ -42,7 +42,8 @@ const packageJson = require('../package.json');
 version += `\n${packageJson.version}\n`;
 
 program
-    .version(version);
+    .version(version)
+    .option('-i, --info', 'Nova-cli is an easy and useful tool for generating a project quickly!');
 
 program
     .command('init <app-name>')
@@ -82,3 +83,7 @@ program
     });
 
 program.parse(process.argv);
+
+if (program.info) {
+    console.log('Nova-cli is an easy and useful tool for generating a project quickly!');
+}
