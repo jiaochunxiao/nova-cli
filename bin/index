@@ -43,10 +43,11 @@ version += `\n${packageJson.version}\n`;
 
 program
     .version(version)
-    .option('-i, --info', 'Nova-cli is an easy and useful tool for generating a project quickly!');
+    .option('-i, --info', 'output some info of the tools');
 
 program
     .command('init <app-name>')
+    .description('create a new project from some template projects')
     .action(name => {
         if(fs.existsSync(name)) {
             console.log(symbols.error, chalk.red('The project already exists!'));
