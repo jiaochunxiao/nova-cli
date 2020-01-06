@@ -28,12 +28,8 @@ prompt.push({
     type: 'rawlist',
     name: 'template',
     choices: [
-        'vue-admin',
         'vue-admin-typescript',
-        'vue-pwa',
-        'react-admin',
         'react-admin-typescript',
-        'react-pwa',
     ],
 });
 

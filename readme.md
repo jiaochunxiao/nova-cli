@@ -16,3 +16,9 @@ Options:
 Commands:
   init <app-name>  create a new project from some template projects
 ```
+
+### todos
+
+- [x] cli基本功能完成
+- [ ] vue-admin-typescript 模板项目完成
+- [ ] react-admin-typescript 模板项目完成
