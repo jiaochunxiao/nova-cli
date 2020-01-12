@@ -28,8 +28,7 @@ prompt.push({
     type: 'rawlist',
     name: 'template',
     choices: [
-        'vue-admin-typescript',
-        'react-admin-typescript',
+        'egg-startkit',
     ],
 });
 
@@ -52,7 +51,7 @@ program
         inquirer.prompt(prompt).then(answers => {
             const { description, author, template } = answers;
             const spinner = ora('downloading template...');
-            const gitRepo = `direct:https://github.com/jiaochunxiao/${template}-template#master`;
+            const gitRepo = `direct:https://github.com/jiaochunxiao/${template}#master`;
             spinner.start();
             download(gitRepo, name, {
                 clone: true,

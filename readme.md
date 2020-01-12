@@ -20,5 +20,6 @@ Commands:
 ### todos
 
 - [x] cli基本功能完成
+- [x] egg-startkit: egg + typescript 项目快速搭建
 - [ ] vue-admin-typescript 模板项目完成
 - [ ] react-admin-typescript 模板项目完成
