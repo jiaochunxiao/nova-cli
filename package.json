@@ -1,8 +1,7 @@
 {
-  "name": "nova-cli",
+  "name": "nova-cli-tools",
   "version": "1.0.0",
   "description": "nova-cli",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +25,7 @@
   "homepage": "https://github.com/jiaochunxiao/nova-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "cli-table": "^0.3.4",
     "commander": "^7.0.0",
     "download-git-repo": "^3.0.2",
     "handlebars": "^4.7.6",

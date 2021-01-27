@@ -5,21 +5,26 @@
 ### 命令行指令
 
 ```
-> nova --help
-Usage: nova [options] [command]
+Usage: nova <command> [options]
 
 Options:
-  -V, --version    output the version number
-  -i, --info       output some info of the tools
-  -h, --help       output usage information
+  -V, --version   output the version number
+  -i, --info      output some info of the tools
+  -h, --help      display help for command
 
 Commands:
-  init <app-name>  create a new project from some template projects
+  init|i          create a new project from some template projects
+  add|a           add a template to local template list
+  list|l          show local template list
+  delete|d        delete template from local storage
+  help [command]  display help for command
 ```
+
+#### nova init
+初始化项目
 
 ### todos
 
 - [x] cli基本功能完成
-- [x] egg-startkit: egg + typescript 项目快速搭建
-- [ ] vue-admin-typescript 模板项目完成
-- [ ] react-admin-typescript 模板项目完成
+- [] 补充基本模板信息
+- [ ] 缓存模板项目到本地
