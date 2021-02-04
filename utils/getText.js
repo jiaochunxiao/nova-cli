@@ -1,12 +1,12 @@
-const symbols = require('log-symbols');
-const chalk = require('chalk');
+const symbols = require('log-symbols')
+const chalk = require('chalk')
 
 const COLOR_CONFIG = {
-    success: 'green',
-    error: 'red',
-    info: 'blue',
-    waring: 'yellow'
-};
+  success: 'green',
+  error: 'red',
+  info: 'blue',
+  waring: 'yellow'
+}
 
 /**
  *
@@ -14,6 +14,5 @@ const COLOR_CONFIG = {
  * @param string type 输出类型
  */
 module.exports = (text, type) => {
-    console.log(type);
-    return `${symbols[type]} ${chalk[COLOR_CONFIG[type]](text)}`;
+  return `${symbols[type]} ${chalk[COLOR_CONFIG[type]](text)}`
 }

@@ -8,5 +8,5 @@ const version = `
  █████  ░░█████ ░░░███████░      ░░███      █████   █████
 ░░
 ░░░    ░░░░░    ░░░░░░░         ░░░      ░░░░░   ░░░░░
-`;
-module.exports = version;
+`
+module.exports = version
