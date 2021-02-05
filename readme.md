@@ -2,6 +2,14 @@
 
 一个用于快速创建项目的CLI工具
 
+### 安装
+
+```
+yarn global add nova-cli-tools
+// or
+npm install nova-cli-tools -g
+```
+
 ### 命令行指令
 
 ```
